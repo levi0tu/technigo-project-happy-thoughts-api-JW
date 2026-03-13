@@ -1,24 +1,33 @@
 # Happy Thoughts API
 
-Replace this readme with your own information about the project. You can include things like:
+This is a backend API for the Happy Thoughts project. It is built with Express and MongoDB and works as a replacement for the original Technigo API.
 
-- Brief description of the assignment
-- How you approached the task, what tools and techniques you used, and how you planned it
-- If you had more time, what would be next?
-- How to run the project locally
+## The project
 
-## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+The API lets a user:
 
+- see the latest thoughts
+- post a new thought
+- like a thought
 
-## Getting Started with the Project
+## Routes
 
-### Dependency Installation & Startup Development Server
+### `GET /thoughts`
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
+Returns a maximum of 20 thoughts, sorted with the newest thoughts first.
 
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
+### `POST /thoughts`
 
-```bash
-npm i && code . && npm run dev
-```
+Creates a new thought.
+
+Example body:
+
+```json
+{
+  "message": "This is a happy thought"
+}
+Deployed version
+happy-thoughts-api-jw.netlify.app
+
+Author
+Created as part of the Technigo Backend course.
